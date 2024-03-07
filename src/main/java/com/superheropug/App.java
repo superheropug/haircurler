@@ -14,11 +14,16 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
-
+    // Replace with something that gets the version
+    String version = "0.1";
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+        scene = new Scene(loadFXML("requestScreen"), 1900, 1000);
+        
         stage.setScene(scene);
+        //stage.setFullScreen(true);
+        stage.setMaximized(true);
+        stage.setTitle("Haircurler v" + version);
         stage.show();
     }
 

@@ -14,6 +14,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 public class RequestScreenController{
     @FXML
@@ -28,6 +29,11 @@ public class RequestScreenController{
     private TextField urlField;
     @FXML
     private ScrollPane scrollPane;
+    @FXML
+    private TextArea headers;
+    @FXML
+    private TextArea requestBody;
+
 
     private String[] httpMethods = {"GET","POST","PUT","PATCH","DELETE","HEAD"};
     @FXML

@@ -33,7 +33,7 @@ public class RequestSender {
             String next;
             next = br.readLine();
             while (next != null){
-                ret = ret + "\n" + next;
+                ret = ret  + next;
                 next = br.readLine();
             }
             br.close();

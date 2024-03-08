@@ -16,15 +16,6 @@ public class RequestSender {
         return sender;
     }
     public String sendRequest(String url, String method){
-        /*ProcessBuilder pb = new ProcessBuilder("cmd.exe","/c","curl -V");
-        Process p = pb.start();
-        BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line;
-        line = br.readLine();
-        while (line != null && ! line.contains("curl")){
-            line = br.readLine();
-        }
-        br.close(); */
         String ret = "";
         try{
             ProcessBuilder pb = new ProcessBuilder("cmd.exe","/c",assembleCurlCommand(url, method));

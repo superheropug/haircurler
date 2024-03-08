@@ -24,7 +24,7 @@ public class RequestSender {
             String next;
             next = br.readLine();
             while (next != null){
-                ret = ret  + next;
+                ret = ret  +"\n   "+ next;
                 next = br.readLine();
             }
             br.close();
@@ -33,7 +33,7 @@ public class RequestSender {
 
     }
     private String assembleCurlCommand(String url, String method){
-        String ret = "curl ";
+        String ret = "curl -D - ";
         ret = ret + "-X "+ method + " ";
         ret = ret + url + " ";
         return ret;

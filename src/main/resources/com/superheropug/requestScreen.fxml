@@ -23,12 +23,12 @@
                </font>
             </TextField>
             <Label fx:id="curlVersion" layoutX="4.0" layoutY="-3.0" text="Curl version rshtguw5hrutghw" />
-            <Label alignment="CENTER" layoutX="1115.0" layoutY="130.0" prefHeight="15.0" prefWidth="700.0" style="-fx-background-color: #239ccc;" text="Response" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="1115.0" layoutY="114.0" prefHeight="15.0" prefWidth="700.0" style="-fx-background-color: #239ccc;" text="Response" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="1115.0" layoutY="148.0" prefHeight="800.0" prefWidth="700.0" vbarPolicy="ALWAYS">
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="1115.0" layoutY="134.0" prefHeight="800.0" prefWidth="700.0" vbarPolicy="ALWAYS">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                      <children>

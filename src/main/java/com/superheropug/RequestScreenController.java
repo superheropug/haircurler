@@ -46,8 +46,5 @@ public class RequestScreenController{
         responseField.setText(response);
         
     }
-    @FXML
-    public void scrollDown(){
-        scrollPane.setVvalue(scrollPane.getVvalue()+0.01);
-    }
+    
 }

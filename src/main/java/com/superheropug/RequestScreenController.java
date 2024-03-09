@@ -35,7 +35,7 @@ public class RequestScreenController{
     private TextArea requestBody;
 
 
-    private String[] httpMethods = {"GET","POST","PUT","PATCH","DELETE","HEAD"};
+    private String[] httpMethods = {"GET","POST","PUT","PATCH","DELETE","HEAD","TRACE"};
     @FXML
     public void switchToPrimary() throws IOException {
         App.setRoot("primary");

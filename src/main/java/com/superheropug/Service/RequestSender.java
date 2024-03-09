@@ -39,7 +39,12 @@ public class RequestSender {
     }
     private String assembleCurlCommand(String url, String method){
         String ret = "curl -D - ";
-        ret = ret + "-X "+ method + " ";
+        if (method.equals("HEAD")){
+            ret = ret + "-I ";
+        } else {
+            ret = ret + "-X "+ method + " ";
+        }
+        
         ret = ret + url + " ";
         return ret;
 
@@ -47,7 +52,12 @@ public class RequestSender {
     }
     private String assembleCurlCommand(String url, String method, Map<String, String> headers, String body){
         String ret = "curl -D - ";
-        ret = ret + "-X "+ method + " ";
+        if (method.equals("HEAD")){
+            ret = ret + "-I ";
+        } else {
+            ret = ret + "-X "+ method + " ";
+        }
+        
         for (Entry header : headers.entrySet()){
             ret = ret + "-H \"" + header.getKey() + ": " + header.getValue() + "\" ";
         }

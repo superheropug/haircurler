@@ -48,7 +48,7 @@ public class RequestScreenController{
     }
     @FXML
     public void cUrl(){
-        String response = RequestSender.getSender().sendRequest(urlField.getText(), httpMethod.getValue());
+        String response = RequestSender.getSender().sendRequest(urlField.getText(), httpMethod.getValue(), headers.getText(), requestBody.getText());
         responseField.setText(response);
         
     }

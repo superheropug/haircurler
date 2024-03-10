@@ -11,11 +11,7 @@
     </properties>
     <dependencies>
 
-        <dependency>
-            <groupId>com.gluonhq</groupId>
-            <artifactId>charm-down-plugin-video</artifactId>
-            <version>3.8.6</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -52,6 +48,29 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                    <manifest>
+                        <mainClass>com.superheropug.App</mainClass>
+                    </manifest>
+                    </archive>
+                    <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <finalName>Haircurler</finalName>
+                    </configuration>
+                    <executions>
+                        <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        </execution>
+                    </executions>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
